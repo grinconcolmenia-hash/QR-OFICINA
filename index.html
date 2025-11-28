@@ -2,56 +2,76 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Prissma Spa – Tu Regalo de Navidad</title>
 
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #F8D8E8;
-            font-family: 'Poppins', sans-serif;
+            background-color: #f8cfe4;
+            font-family: Arial, sans-serif;
             text-align: center;
         }
 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #D1448F;
-            font-size: 26px;
-            margin-bottom: 10px;
+        .titulo {
+            margin: 25px 15px 10px;
+            font-size: 22px;
             font-weight: bold;
+            color: #c2185b;
+            line-height: 1.3;
         }
 
-        .flowers {
+        /* CONTENEDOR VERTICAL */
+        .video-container {
             width: 100%;
-            max-width: 300px;
-            margin: 0 auto 15px auto;
+            max-width: 500px;
+            margin: 20px auto;
+            border-radius: 20px;
+            overflow: hidden;
+
+            aspect-ratio: 9 / 16;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
+        /* VIDEO VERTICAL */
         video {
             width: 100%;
-            border-radius: 15px;
-            margin-top: 10px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            background: #000;
         }
 
+        .decor {
+            width: 80px;
+            opacity: 0.5;
+            margin: 20px auto 40px;
+        }
     </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <img class="flowers" src="color.gif" alt="Flores decorativas">
+    <h1 class="titulo">✨ Diciembre es para brillar… este regalo es para ti ✨</h1>
 
-        <h1>Diciembre es para brillar… este regalo es para ti ✨</h1>
-
-        <video src="QR OFICINA 2.mp4" autoplay playsinline muted controls></video>
-
-        <img class="flowers" src="color.gif" alt="Flores decorativas">
+    <div class="video-container">
+        <video 
+            controls 
+            playsinline 
+            webkit-playsinline 
+            preload="auto"
+            onclick="this.requestFullscreen();"
+        >
+            <source src="QR OFICINA 2 .mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
     </div>
+
+    <img class="decor" src="https://cdn-icons-png.flaticon.com/512/8033/8033147.png" alt="Decoración">
 
 </body>
 </html>
